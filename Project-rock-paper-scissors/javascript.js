@@ -9,7 +9,7 @@ function computerPlay() {
     return options[selection];
 }
 
-function playRound(playerSelection, computerSelection) {
+function playRound(playerSelection) {
     let playerSelectionTrimmed = playerSelection.trim().toLowerCase();
     const optionsLowercase = ["rock", "paper", "scissors"];
     let playerSelectionIndex = optionsLowercase.indexOf(playerSelectionTrimmed);
@@ -30,10 +30,28 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-function game() {
-    for (let i = 0; i < 5; i++) {
-        let choice = prompt("Lets play Rock, Paper, Scissors! Select an option");
-        console.log(playRound(choice, computerPlay()));
-    }
-    console.log("Final score: " + playerWin + " : " + botWin);
+const outcomeText = document.querySelector(".results");
+const score = document.querySelector(".scoreNumber");
+
+function game(choice) {
+    let outcome = (playRound(choice, computerPlay()));
+    outcomeText.textContent = outcome;
+    score.textContent = playerWin + " : " + botWin;
+
 }
+
+const rock = document.querySelector(".rock");
+const paper = document.querySelector(".paper");
+const scissors = document.querySelector(".scissors");
+
+rock.addEventListener("click", () => {
+    game("rock");
+});
+
+paper.addEventListener("click", () => {
+    game("paper");
+});
+
+scissors.addEventListener("click", () => {
+    game("scissors");
+});
