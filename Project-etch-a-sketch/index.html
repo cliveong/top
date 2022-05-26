@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project-Etch-a-Sketch</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1 class="header">Etch-a-Sketch</h1>
+    <div class="selection">
+        <div class="size">
+            <div class="sizeInfo">Set grid size here</div>
+            <div class="sizeBottom">
+                <input id="inputSize" type ="number" min="16" max="100">
+                <button class="buttonInput">Submit</button>
+            </div>
+        </div>
+        <div class="clear">
+            <div class="clearInfo">Clear Sketch here</div>
+            <div class="sizeBottom">
+                <button class="clearButton">Clear All</button>
+            </div>
+        </div>
+    </div>
+    <div class="grid"></div>
+    <script src="javascript.js" defer></script>
+</body>
+</html>

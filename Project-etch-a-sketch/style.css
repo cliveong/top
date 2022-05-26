@@ -1,0 +1,56 @@
+.pixel {
+    aspect-ratio: 1 / 1;
+    border: solid black 1px;
+}
+
+.grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    aspect-ratio: 1 / 1;
+    margin-top: 32px;
+}
+
+.selection {
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.row {
+    flex: 1;
+}
+
+.header {
+    font-size: 64px;
+}
+
+.size, .clear {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 32px;
+    justify-content: flex-end;
+}
+
+
+input, button {
+    margin: 0;
+    padding: 0;
+    height: 32px;
+}
+
+button {
+    padding: 4px;
+}
+
+.sizeInfo {
+    margin-bottom: 0;
+}
