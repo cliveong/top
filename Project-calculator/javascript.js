@@ -12,11 +12,14 @@ const equal = document.querySelector(".equal");
 const display = document.querySelector(".screen");
 const negative = document.querySelector(".negative");
 
+
 numbers.forEach((button) =>
     button.addEventListener("click", () => {
         addToNumber(button.textContent);
     }));
 
+// Appends user input to overall value of operand, 
+// numberOne is for first operand, number is for subsequent
 function addToNumber(num) {
     if (error()) return;
     overrideOperator = false;
@@ -33,6 +36,8 @@ point.addEventListener("click", () => {
     pointify();
 });
 
+//Appends . to number, like the '.' in 2.0
+//Ignore if . already exist
 function pointify() {
     if (error()) return;
     overrideOperator = false;
@@ -53,7 +58,11 @@ oper.forEach((button) =>
     button.addEventListener("click", () => {
         operand(button.textContent);
     }));
-    
+  
+//When the user clicks on 2nd operator,    
+//Check if there is a pair of numbers to be worked on
+//If there is, merge them via the operator
+//Also checks if the operator is meant to override the first 
 function operand(txt) {
     if (error()) return;
     if (numberTwo.length === 0) {
@@ -139,6 +148,7 @@ clear.addEventListener("click", () => {
     display.textContent = null;
 });
 
+//Makes positive number negative and vice versa
 negative.addEventListener("click", () => {
     if (error()) return;
     overrideOperator = false;
@@ -166,6 +176,8 @@ equal.addEventListener("click", () => {
     overrideOperator = false;
 });
 
+//check for error msg
+//prevent use from carrying on until cleared
 function error() {
     if (numberOne === "Error" || numberOne === "Overflow Error" || numberTwo === "Overflow Error") {
         return true;
@@ -173,9 +185,16 @@ function error() {
     return false;
 }
 
+//Check for overflow, cuts of number if required
 function displayScreen(number) {
     if (Number(number) > 99999999999) {
         number = "Overflow Error"
+    }
+    if (Number(number) < -99999999999) {
+        number = "Overflow Error"
+    }
+    if (Number(number) == parseInt(number)) {
+        number = parseInt(number).toString();
     }
     if (number.length > 11) {
         number = number.substring(0,11)
