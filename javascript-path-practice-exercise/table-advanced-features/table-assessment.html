@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Table template</title>
+    <link href="minimal-table.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <h1>Table template</h1>
+    <table>
+        <caption>Data about some planets</caption>
+        <thead>
+            <tr>
+                <th colspan="3"></th>
+                <th scope="col">Mass (10<sup>24</sup>kg)</th>
+                <th scope="col">Diameter (km)</th>
+                <th scope="col">Density (kg/m<sup>3</sup>)</th>
+                <th scope="col">Gravity (m/s<sup>2</sup>)</th>
+                <th scope="col">Length of day (hours)</th>
+                <th scope="col">Distance from Sun (10<sup>6</sup>km)</th>
+                <th scope="col">Mean temperature (°C)</th>
+                <th scope="col">Number of moons</th>
+                <th scope="col">Notes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row" rowspan="4">Jovian planets</th>
+                <th scope="row" rowspan="2">Gas giants</th>
+                <th scope="row">Jupiter</th>
+                <td>1898</td>
+                <td>142984</td>
+                <td>1326</td>
+                <td>23.1</td>
+                <td>9.9</td>
+                <td>778.6</td>
+                <td>-110</td>
+                <td>67</td>
+                <td>The largest planet</td>
+            </tr>
+            <tr>      
+                <th scope="row">Saturn</th>
+                <td>568</td>
+                <td>120,536</td>
+                <td>687</td>
+                <td>9.0</td>
+                <td>10.7</td>
+                <td>1433.5</td>
+                <td>-140</td>
+                <td>62</td>
+                <td></td>
+            </tr>
+            <tr>        
+                <th scope="row" rowspan="2">Ice giants</th>
+                <th scope="row">Uranus</th>
+                <td>86.8</td>
+                <td>51,118</td>
+                <td>1271</td>
+                <td>8.7</td>
+                <td>17.2</td>
+                <td>2872.5</td>
+                <td>-195</td>
+                <td>27</td>
+                <td></td>
+            </tr>
+            <tr>        
+                <th>Neptune</th>
+                <td>102</td>
+                <td>49,528</td>
+                <td>1638</td>
+                <td>11.0</td>
+                <td>16.1</td>
+                <td>4495.1</td>
+                <td>-200</td>
+                <td>14</td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+
+  </body>
+</html>
