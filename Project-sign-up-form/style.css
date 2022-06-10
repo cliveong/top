@@ -1,0 +1,142 @@
+@font-face {
+    font-family: NorseBold;
+    src: url(./font/Norse-Bold.otf);
+}
+
+body {
+    display: flex;  
+    margin: 0;
+}
+
+.left {
+    background-image: url(./images/mountain.jpg);
+    background-position: center;
+    height: 100vh;
+    min-height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    width: clamp(300px, 40%, 40%);
+    justify-content: space-between;
+    align-items: center;
+}
+
+.credits {
+    color: white;
+    margin-bottom: 16px;
+}
+
+a {
+    color: white;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.08);
+    margin: 20vh 0 0 0;
+    width: 100%;
+    justify-content: center;
+}
+
+.icon {
+    height: 12vh;
+    min-height: 128px;
+    padding: 5px;
+}
+
+.iconDes {
+    font-size: clamp(7rem,11vh, 11vh);
+    color: white;
+    font-family: NorseBold, sans-serif;
+}
+
+.right {
+    width: clamp(400px, 60%, 70%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fafafb;
+}
+
+form {
+    margin: 1vh 0;
+}
+
+button {
+    margin: 1vh 0 0 0;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+}
+
+ul {
+    list-style-type: none;
+}
+
+fieldset {
+    border: none;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 2px rgb(230, 230, 230);
+    margin: 0;
+}
+
+.notRealInfo {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 24px 16px 48px 32px; /* T R B L */
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+input {
+    width: clamp(200px, 250px, 300px);
+    height: 24px;
+    border-radius: 3px;
+    border-style: solid;
+}
+
+input:valid {
+    border-color: green;
+}
+
+input:focus {
+    border-color: blue;
+}
+
+.input {
+    margin: 8px 16px;
+}
+
+label {
+    font-size: 1rem;
+}
+
+button {
+    width: 180px;
+    height: 36px;
+    margin: 24px 16px 4px 32px;
+    background-color: #b4b1cb;
+    border-radius: 3px;
+    font-size: 1.2rem;
+}
+
+.alrHaveAcc {
+    margin: 4px 16px 8px 32px;
+}
+
+.alrHaveAcc > a {
+    color: aqua;
+}
+
+li, ul {
+    padding: 0;
+}
+
+

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-up Form</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- left -->
+    <div class="left">
+        <div class="logo">
+            <img class="icon" src="./images/odin-lined.png" alt="The Odin Project Logo">
+            <div class="iconDes">ODIN</div>
+        </div>
+        
+        <div class="credits">Photo by <a href="https://unsplash.com/@mvds?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Mads Schmidt Rasmussen</a> on <a href="https://unsplash.com/photos/xfngap_DToE">Unsplash</a></div>
+    </div>
+
+    <!-- right -->
+    <div class="right">
+        <div class="notRealInfo">The Odin Project sign-up form. This is not a real service, do not use actual passwords. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br><br> Sign up now!</div>
+        <form action="" method="post">
+        <fieldset>
+            <ul>
+                <li>   
+                    <div class="row">
+                        <div class="input">
+                            <label for="firstName">
+                                FIRST NAME   
+                            </label>
+                            <input type="text" id="firstName" name="first_name" required>                            
+                        </div>
+
+                        <div class="input">
+                            <label for="lastName">
+                                LAST NAME
+                            </label>
+                            <input type="text" id="lastName" name="last_name" required>    
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="row">
+                        <div class="input">
+                            <label for="email">
+                                EMAIL
+                            </label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        
+                        <div class="input">
+                            <label for="phone">
+                                PHONE NUMBER
+                            </label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="row">
+                        <div class="input">
+                            <label for="password">
+                                PASSWORD
+                            </label>
+                            <input type="password" id="password" name="password" required>
+                        </div>
+
+                        <div class="input">
+                            <label for="cfmPassword">
+                                CONFIRM PASSWORD
+                            </label>
+                            <input type="password" id="cfmPassword" name="cfmPassword" required>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </fieldset>
+        <div>   
+            <button type="submit">Create Account</button>
+        </div>
+        <div class="alrHaveAcc">
+            Already have an account? <a href="">Log in</a>
+        </div>    
+    </form> 
+    </div>
+
+
+</body>
+</html>
+
