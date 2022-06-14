@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+    </style>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="menu">
+            <div class="topDash dash">
+                Dashboard
+            </div>
+            <div class="middleDash dash">
+                <div>Home</div>
+                <div>Profile</div>
+                <div>Messages</div>
+                <div>History</div>
+                <div>Tasks</div>
+                <div>Communities</div>
+            </div>
+            <div class="bottomDash dash">
+                <div>Settings</div>
+                <div>Support</div>
+                <div>Privacy</div>
+            </div>
+        </div>
+        <div class="topSection">
+            <div class="row1">           
+                <div class="left">
+                    <img src="./SVG/magnify.svg" width="20rem" class="searchIcon" alt="Search Icon">
+                    <input type="search" name="search" id="search" placeholder="Search...">
+                </div>
+
+                <div class="right">
+                    <img src="./SVG/bell-ring-outline.svg" width="20rem" alt="Notifications">
+                    <img src="./images/profilepic.png" width="25rem" alt="Profile Picture">
+                    <div>John Doe</div>
+                </div>   
+            </div>
+
+            <div class="row2">
+                <div class="left">
+                    <img src="./images/profilepic.png" width="30rem" alt="Profile Picture">
+                    <div>
+                        <div>Hi there,</div>
+                        <div>John Doe (@jondoe)</div>
+                    </div>
+                </div>
+                <div class="right">
+                    <button>New</button>
+                    <button>Upload</button>
+                    <button>Share</button>
+                </div>
+            </div>
+        </div>
+        <div class="yourProjects">
+            <div class="yourProjectsTitle">Your Projects</div>
+            
+            <div class="cardContainer">
+                <div class="card">
+                    <div>Title 1</div>
+                    <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+                    <img class="starPlus" src="./SVG/star-plus-outline.svg" alt="Star plus">
+                    <img class="eyePlus" src="./SVG/eye-plus-outline.svg" alt="Eye plus">
+                    <img class="sourceFork" src="./SVG/source-fork.svg" alt="Source Fork">
+                </div>
+                <div class="card">
+                    <div>Title 2</div>
+                    <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+                    <img class="starPlus" src="./SVG/star-plus-outline.svg" alt="Star plus">
+                    <img class="eyePlus" src="./SVG/eye-plus-outline.svg" alt="Eye plus">
+                    <img class="sourceFork" src="./SVG/source-fork.svg" alt="Source Fork">
+                </div>
+                <div class="card">
+                    <div>Title 3</div>
+                    <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+                    <img class="starPlus" src="./SVG/star-plus-outline.svg" alt="Star plus">
+                    <img class="eyePlus" src="./SVG/eye-plus-outline.svg" alt="Eye plus">
+                    <img class="sourceFork" src="./SVG/source-fork.svg" alt="Source Fork">
+                </div>
+                <div class="card">
+                    <div>Title 4</div>
+                    <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+                    <img class="starPlus" src="./SVG/star-plus-outline.svg" alt="Star plus">
+                    <img class="eyePlus" src="./SVG/eye-plus-outline.svg" alt="Eye plus">
+                    <img class="sourceFork" src="./SVG/source-fork.svg" alt="Source Fork">
+                </div>
+                <div class="card">
+                    <div>Title 5</div>
+                    <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+                    <img class="starPlus" src="./SVG/star-plus-outline.svg" alt="Star plus">
+                    <img class="eyePlus" src="./SVG/eye-plus-outline.svg" alt="Eye plus">
+                    <img class="sourceFork" src="./SVG/source-fork.svg" alt="Source Fork">
+                </div>
+                <div class="card">
+                    <div>Title 6</div>
+                    <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+                    <img class="starPlus" src="./SVG/star-plus-outline.svg" alt="Star plus">
+                    <img class="eyePlus" src="./SVG/eye-plus-outline.svg" alt="Eye plus">
+                    <img class="sourceFork" src="./SVG/source-fork.svg" alt="Source Fork">
+                </div>
+            </div>
+        </div>
+        <div class="rightSide">
+            <div class="announcements">
+                <div class="announcementTitle">Announcements</div>
+                <div class="announcementsContainer rightcontainer">
+                    <div>
+                        <p>Announcement 1</p>
+                        <p class="line">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                    <div>
+                        <p>Announcement 2</p>
+                        <p class="line">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                    <div>
+                        <p>Announcement 3</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="trending">
+                <div class="trendingTitle">Trending</div>
+                <div class="trendingContainer rightcontainer">
+                    <div>
+                        <p>Trending 1</p>
+                        <p class="line">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                    <div>
+                        <p>Trending 2</p>
+                        <p class="line">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                    <div>
+                        <p>Trending 3</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
