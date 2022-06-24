@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Library</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="header">Project Library</div>
+    <script src="./javascript.js" defer></script>
+    <form id="bookForm" method="post">
+        <fieldset>
+            <legend>Add a new book!</legend>
+            <ul>
+                <li>
+                    <label for="title">
+                        Title:
+                        <input type="text" id="title" name="title" 
+                        placeholder="A Game of Thrones" minlength="1" required>
+                    </label>
+                </li>
+                <li>
+                    <label for="author">
+                        Author:
+                        <input type="text" id="author" name="author" 
+                        placeholder="George R.R. Martin" minlength="1" required>
+                    </label>
+                </li>
+                <li>
+                    <label for="pages">
+                        Pages: 
+                        <input type="number" id="pages" name="pages" 
+                        placeholder="694" min="1" required>
+                    </label>
+                </li>
+                <li>
+                    <label for="read">
+                        Completed:
+                        <input type="checkbox" id="read" name="read">
+                    </label>
+                </li>
+            </ul>
+            <button type="submit" class="addBook">Add book</button>
+        </fieldset>
+    </form>
+
+
+    <div class="tableWrapper">
+        <table id="table">
+            <thead>
+                <tr>
+                    <th scope="col"><button type="button" class="delete">Delete</button></th>
+                    <th scope="col">Index</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Author</th>
+                    <th scope="col">Pages</th>
+                    <th scope="col">Read</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+
+        </table>        
+    </div>    
+
+    
+</body>
+</html>
