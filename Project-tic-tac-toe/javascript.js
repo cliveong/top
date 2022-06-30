@@ -8,6 +8,8 @@ const gameBoard = () => {
         firstPlayerTurn = !firstPlayerTurn;
     };
 
+    //initialise the game by making the cells clickable
+    // and assigning processes
     const startGame = () => {
         let tableCells = document.querySelectorAll("td");
         tableCells.forEach(cell => 
@@ -63,6 +65,7 @@ const gameBoard = () => {
     }
 
     //find the winner based on placed pieces (in game state)
+    //return the winning 3 in a row locations if avail
     const getWinner = () => {
         //0 1 2 
         //3 4 5
@@ -94,6 +97,8 @@ const gameBoard = () => {
         return null;
     }
 
+    //check the winning array, increases the size of
+    //winning combo, enable overlay stating winner
     const highlightWinner = (winningArray) => {
         if (winningArray === null) {
             return;
@@ -122,6 +127,7 @@ const gameBoard = () => {
         }
     }
 
+    //restart the game to original, used on winning/draw
     const restartBoard = () => {
         let cells = document.querySelectorAll("td");
         cells.forEach(cell => {
@@ -134,6 +140,9 @@ const gameBoard = () => {
         firstPlayerWinner = null;
     }
 
+    //check for draw and shoot up overlay
+    //is place over highlight winner to as innerhtml editing 
+    //will not override
     const checkDraw = () => {
         if (!(gameState.includes(0))) {
             let overlay = document.querySelector(".overlay");
