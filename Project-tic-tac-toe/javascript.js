@@ -2,7 +2,6 @@ const gameBoard = () => {
     let firstPlayerTurn = true;
     let firstPlayerWinner = null;
     let gameState = [0,0,0,0,0,0,0,0,0];
-    let winningCombinations
 
     const getTurn = () => firstPlayerTurn;
     const changeTurn = () => {
@@ -23,10 +22,22 @@ const gameBoard = () => {
                         updateGameState(cell ,2);
                     }
                     changeTurn();
+                    checkDraw();
                     let winningArray = getWinner();
                     highlightWinner(winningArray);
                 }
             }));
+
+        let overlay = document.querySelector(".overlay");
+        let congrats = document.querySelector(".inlineText")
+        overlay.addEventListener("click", () => {
+            overlay.style.display = "none";
+            congrats.style.display = "none";
+            congrats.innerHTML = "";
+            restartBoard();
+        });
+
+
     };
 
     //add cross or circle on given table cell
@@ -71,17 +82,9 @@ const gameBoard = () => {
                 gameState[winningCombo[i][1]] === 
                 gameState[winningCombo[i][2]]) {
                     if (gameState[winningCombo[i][0]] === 1) {
-                        // console.log(gameState[winningCombo[i][0]]);
-                        // console.log(gameState[winningCombo[i][1]]);
-                        // console.log(gameState[winningCombo[i][2]]);
-                        // console.log(winningCombo[i]);
                         firstPlayerWinner = true;
                         return winningCombo[i];
                     } else if (gameState[winningCombo[i][0]] === 2){
-                        // console.log(gameState[winningCombo[i][0]]);
-                        // console.log(gameState[winningCombo[i][1]]);
-                        // console.log(gameState[winningCombo[i][2]]);
-                        // console.log(winningCombo[i]);
                         firstPlayerWinner = false;
                         return winningCombo[i];
                     }                 
@@ -92,7 +95,53 @@ const gameBoard = () => {
     }
 
     const highlightWinner = (winningArray) => {
+        if (winningArray === null) {
+            return;
+        }
         let tempIndex = 0;
+        let tableCells = document.querySelectorAll("td");
+        
+        tableCells.forEach(cell => {
+                if (winningArray.includes(tempIndex)) {
+                    let img = cell.firstChild;
+                    console.log(img);
+                    let imgWidth = (img.offsetWidth+80).toString();
+                    img.style.width = imgWidth + "px";
+                }
+                tempIndex++;
+            });
+
+        let overlay = document.querySelector(".overlay");
+        let congrats = document.querySelector(".inlineText")
+        overlay.style.display = "block";
+        congrats.style.display = "block";
+        if (firstPlayerWinner) {
+            congrats.innerHTML = "Player 1 wins!"
+        } else {
+            congrats.innerHTML = "Player 2 wins!"
+        }
+    }
+
+    const restartBoard = () => {
+        let cells = document.querySelectorAll("td");
+        cells.forEach(cell => {
+            while (cell.hasChildNodes()) {
+                cell.removeChild(cell.firstChild);
+            }
+        });
+        gameState = [0,0,0,0,0,0,0,0,0];
+        firstPlayerTurn = true;
+        firstPlayerWinner = null;
+    }
+
+    const checkDraw = () => {
+        if (!(gameState.includes(0))) {
+            let overlay = document.querySelector(".overlay");
+            let congrats = document.querySelector(".inlineText")
+            overlay.style.display = "block";
+            congrats.style.display = "block";
+            congrats.innerHTML = "It's a draw!"
+        }
     }
 
     return {
