@@ -7,8 +7,7 @@ const contentDiv = document.querySelector("#content");
 
 const header = document.createElement("div");
 header.className = 'header';
-header.textContent = 'Shitty Pizza'
-contentDiv.appendChild(header);
+header.textContent = 'PizzaNotHut'
 
 const buttons = document.createElement("div");
 buttons.className = 'buttons'
@@ -29,8 +28,13 @@ contact.addEventListener("click", () => {
     renderContact();
 })
 
-buttons.appendChild(home);
-buttons.appendChild(contact);
+const buttonsHolder = document.createElement("div");
+buttonsHolder.className = "buttonsHolder";
+
+buttons.appendChild(header);
+buttonsHolder.appendChild(home);
+buttonsHolder.appendChild(contact);
+buttons.appendChild(buttonsHolder);
 
 const contentModules = document.createElement("div");
 contentModules.className = 'contentModules';

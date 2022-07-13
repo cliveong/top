@@ -1,9 +1,100 @@
+body {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    margin: 0;
+    background-image: url(./images/cardboard-vertical-lines-pattern\ \(1\).jpg);
+}
+
 #content {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .buttons {
     display: flex;
     gap: 10px;
+    font-size: 3rem;
+    align-items: center;
+    justify-content: space-around;
+    width: 100vw;
+    background-color: rgba(186, 42, 42, 0.805);
+    margin: 0 0 16px 0;
+    color: white;
+    padding: 32px;
+}
+
+.buttonsHolder  {
+    display: flex;
+    gap: 32px;
+}
+
+.header {
+    font-size: 6rem;
+}
+
+.contentModule {
+    justify-content: center;
+    align-items: center;
+}
+
+.gridWrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 32px;
+    width: min(1000px, 80vw);
+}
+
+.name {
+    font-size: 2.5rem;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    padding: 2px 8px;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.45);
+    width: 100%;
+    
+}
+
+.image1 {
+    background: url("./images/hawaiian.jpg");
+}
+
+.image2 {
+    background: url("./images/pepperoni.jpg");
+}
+
+.image3 {
+    background: url("./images/cheese.jpg");
+}
+
+.image4 {
+    background: url("./images/veggie.jpg");
+}
+
+.image {
+    aspect-ratio: 1/1;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+}
+
+.openingHours, .contactNum, .location {
+    background-color: white;
+    border: 6px solid rgb(186, 42, 42);
+    font-size: 1.6rem;
+    padding: 16px;
+    border-radius: 32px;
+    margin: 32px;
+}
+
+.title {
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin: 4px 0;
 }
